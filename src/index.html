@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery with Lightbox</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>🖼️ Image Gallery</h1>
+  <p class="tagline">Filter, search, shuffle — click any photo to open the lightbox.</p>
+</header>
+
+<main>
+  <div class="controls">
+    <input type="search" id="searchInput" placeholder="🔍 Search photos (e.g. mountain, city)…" aria-label="Search photos">
+    <div class="filters" id="filters" role="group" aria-label="Category filters"></div>
+    <button id="shuffleBtn" class="shuffle" title="Shuffle the gallery">🔀 Shuffle</button>
+  </div>
+  <p id="countText" class="count" aria-live="polite"></p>
+  <div id="gallery" class="gallery" aria-live="polite"></div>
+  <p id="emptyState" class="empty" hidden>No photos match your search. Try another word or category.</p>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="closeBtn" class="lb-btn close" aria-label="Close">✕</button>
+  <button id="prevBtn" class="lb-btn prev" aria-label="Previous photo">‹</button>
+  <button id="nextBtn" class="lb-btn next" aria-label="Next photo">›</button>
+  <figure class="lb-figure">
+    <img id="lbImage" src="" alt="">
+    <figcaption>
+      <h2 id="lbTitle"></h2>
+      <p id="lbMeta" class="meta"></p>
+      <p id="lbDesc"></p>
+      <a id="downloadBtn" class="download" href="#" download>⬇ Download photo</a>
+    </figcaption>
+  </figure>
+</div>
+
+<footer><p>Built by Clamor · Photos: Picsum Photos (free, no key) · Click a photo, use ← → keys to browse, Esc to close</p></footer>
+<script src="app.js"></script>
+</body>
+</html>
