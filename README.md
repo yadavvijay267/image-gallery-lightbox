@@ -44,20 +44,6 @@ Note: photos load from picsum.photos, so you need internet access to see the ima
 
 Screenshots live in [`screenshots/`](screenshots/) — see `SCREENSHOTS.md` there for the naming convention.
 
-## Project Structure
-
-```
-image-gallery-lightbox/
-├── src/
-│   ├── index.html   # controls, gallery grid, lightbox markup
-│   ├── styles.css   # masonry grid, lightbox, responsive rules
-│   └── app.js       # photo data, filters, lazy loading, lightbox logic
-├── assets/          # logo.svg
-├── docs/            # ARCHITECTURE.md
-├── tests/           # TESTING.md + validate.py
-└── screenshots/     # SCREENSHOTS.md
-```
-
 ## License
 
 MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Clamor.
